@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react'
 
 export default class User extends Component {
