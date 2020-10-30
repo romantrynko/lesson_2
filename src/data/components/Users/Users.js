@@ -10,13 +10,12 @@ export default class Users extends Component {
     state = {users: []};
     
     async componentDidMount() {
-        this.setState({users: await this.api.getUsers()});
-        
+        this.setState({users: await this.api.getUsers()});   
     }
 
     render() {
         return (
-            <div>
+            <div className="d-flex flex-nowrap">
                 {
                     this.state.users.map(user => {
                         return (
