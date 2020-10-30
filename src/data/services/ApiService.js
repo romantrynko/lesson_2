@@ -11,9 +11,9 @@ export class ApiService {
         return (await fetch(this._url)).json();
     }
     
-    // async getUserById(id) {
-    //     return (await fetch(`${this._url}/${id}`)).json();
-    // }
+    async getUserById(id) {
+        return (await fetch(`${this._url}/${id}`)).json();
+    }
     
     async getPosts() {
         return (await fetch(this._url_posts)).json();

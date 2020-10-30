@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ApiService } from '../../services/ApiService';
 import User from '../User/User';
-import './Users.css';
 
 export default class Users extends Component {
 
@@ -15,7 +14,7 @@ export default class Users extends Component {
 
     render() {
         return (
-            <div className="d-flex flex-nowrap">
+            <div>
                 {
                     this.state.users.map(user => {
                         return (
