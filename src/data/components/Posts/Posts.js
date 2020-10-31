@@ -18,7 +18,7 @@ export default class Posts extends Component {
                 {
                     this.state.posts.map(post => {
                         return (
-                            <Post post={post} key="post.id"/>
+                            <Post post={post} key={post.id}/>
                         )
                     })
                 }

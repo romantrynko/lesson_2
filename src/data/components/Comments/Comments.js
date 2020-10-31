@@ -20,7 +20,7 @@ export default class Comments extends Component {
                 {
                     this.state.comments.map(comment => {
                         return (
-                            <Comment comment={comment} key="comment.id"/>
+                            <Comment comment={comment} key={comment.id}/>
                         )
                     })
                 }

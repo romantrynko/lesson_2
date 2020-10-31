@@ -18,7 +18,7 @@ export default class Users extends Component {
                 {
                     this.state.users.map(user => {
                         return (
-                            <User user={user} key="user.id"/>
+                            <User user={user} key={user.id}/>
                         )
                     })
 
