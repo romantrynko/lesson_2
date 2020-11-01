@@ -1,17 +1,18 @@
 import './App.css';
-import Users from './data/components/users/Users';
-import {ApiService} from './data/services/apiService';
+import Comments from './data/components/Comments/Comments';
+import Posts from './data/components/Posts/Posts';
+import Users from './data/components/Users/Users';
 
 function App() {
 
-  let api = new ApiService();
-  console.log(api);
+
 
   return (
-    <div>
+    <div className="d-flex flex-row p-3">
     <Users/>
-    </div>
-  );
+    <Posts/>
+    <Comments/>
+    </div>);
 }
 
 export default App;
