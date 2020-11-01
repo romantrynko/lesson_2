@@ -13,11 +13,11 @@ class User extends Component {
     render() {
         let { id, name, age, status } = this.props.user;
         return (
-            <div className="alert alert-primary m-3" role="alert">
+            <div className="alert alert-info m-3" role="alert">
                 {id}. {name}, age: {age}
                 <br/> 
                 status: {this.state.userStatus.toString()}
-                <button type="button" className="btn btn-outline-secondary d-flex " onClick={() => {return this.changeStatus(status)}}>Change status</button>
+                <button type="button" className="btn btn-outline-success d-flex " onClick={() => {return this.changeStatus(status)}}>Change status</button>
             </div>
         );
     }
