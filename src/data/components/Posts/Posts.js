@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { ApiService } from '../../services/ApiService';
 import Post from '../Post/Post';
+import { PostService } from '../../services/PostService';
 
 export default class Posts extends Component {
 
-    apiPosts = new ApiService();
+    postService = new PostService();
 
     state = {posts: []};
 
     async componentDidMount() {
-        this.setState({posts: await this.apiPosts.getPosts()});
+        this.setState({posts: await this.postService.getPosts()});
     }
 
     render() {

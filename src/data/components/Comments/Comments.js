@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { ApiService } from '../../services/ApiService'
 import Comment from '../Comment/Comment';
+import { CommentService } from '../../services/CommentService';
 
 export default class Comments extends Component {
 
-    apiComments = new ApiService();
+    commentService = new CommentService();
 
     state = { comments: []};
 
     async componentDidMount() {
-        this.setState({comments: await this.apiComments.getComments()});
+        this.setState({comments: await this.commentService.getComments()});
     }
 
     render() {

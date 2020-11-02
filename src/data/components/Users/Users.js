@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { ApiService } from '../../services/ApiService';
 import User from '../User/User';
+import { UserService } from '../../services/UserService';
 
 export default class Users extends Component {
 
-    api = new ApiService();
+    userService = new UserService();
 
     state = {users: []};
     
     async componentDidMount() {
-        this.setState({users: await this.api.getUsers()});   
+        this.setState({users: await this.userService.getUsers()});   
     }
 
     render() {
